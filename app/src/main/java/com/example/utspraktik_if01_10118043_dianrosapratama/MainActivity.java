@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 public static final String EXTRA_MESSAGE = "com.example.utspraktik_if01_10118043_dianrosapratama";
     private Button button;
     private TextView textView;
-    RadioGroup radioGroup;
-    RadioButton radioButton;
+    RadioGroup jenis_kelamin;
+    private String jk,relasi2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,43 @@ public static final String EXTRA_MESSAGE = "com.example.utspraktik_if01_10118043
             }
         });
 
-        radioGroup = findViewById(R.id.radgender);
+
+        RadioGroup jenisKelamin,relasi;
+        jenisKelamin = findViewById(R.id.radgender);
+
+        jenisKelamin.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.rb_male:
+                        jk = "Laki - Laki";
+                        break;
+                    case R.id.rb_female:
+                        jk = "Perempuan";
+                }
+            }
+        });
+
+        relasi = findViewById(R.id.radrelasi);
+
+        relasi.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.ortu:
+                        relasi2 = "Orang tua";
+                        break;
+                    case R.id.suamiistri:
+                        relasi2 = "Suami Istri";
+                        break;
+                    case R.id.anak:
+                        relasi2 = "Anak";
+                        break;
+                    case R.id.kerabat:
+                        relasi2 = "Kerabat";
+                }
+            }
+        });
 
     }
     public  void pindahhalaman (View view){
@@ -53,6 +89,8 @@ public static final String EXTRA_MESSAGE = "com.example.utspraktik_if01_10118043
         intent.putExtra("nik", message);
         intent.putExtra("nama", message2);
         intent.putExtra("tanggal", message3);
+        intent.putExtra("jk", jk);
+        intent.putExtra("relasi", relasi2);
         startActivity(intent);
     }
     public void TampilTanggal(){

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class end extends AppCompatActivity {
-
+    //(5 Juni 2021, 10118043, Dian Rosa Pratama, IF-01)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
