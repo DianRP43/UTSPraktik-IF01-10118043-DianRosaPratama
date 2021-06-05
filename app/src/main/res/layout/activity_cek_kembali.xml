@@ -97,7 +97,6 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:padding="3dp"
-            android:background="@color/green_primary"
             android:hint="asdasasd"
             ></EditText>
         <TextView
@@ -106,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Hubungan Dengan anda"
+            android:text="Hubungan dengan anda"
             android:textStyle="bold"/>
         <EditText
             android:layout_marginTop="6dp"
@@ -115,8 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:padding="3dp"
-            android:background="@color/green_primary"
-            android:hint="asdasasd"
+            android:hint="Orangtua"
             ></EditText>
         <Button
             android:layout_width="match_parent"

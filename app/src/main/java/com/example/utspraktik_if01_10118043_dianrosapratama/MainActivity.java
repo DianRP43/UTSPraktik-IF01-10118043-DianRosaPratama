@@ -15,12 +15,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 public static final String EXTRA_MESSAGE = "com.example.utspraktik_if01_10118043_dianrosapratama";
     private Button button;
     private TextView textView;
+    RadioGroup radioGroup;
+    RadioButton radioButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +36,9 @@ public static final String EXTRA_MESSAGE = "com.example.utspraktik_if01_10118043
                 TampilTanggal();
             }
         });
+
+        radioGroup = findViewById(R.id.radgender);
+
     }
     public  void pindahhalaman (View view){
         Intent intent = new Intent(this,CekKembali.class);
@@ -63,5 +69,4 @@ public static final String EXTRA_MESSAGE = "com.example.utspraktik_if01_10118043
             }
         });
     }
-
 }

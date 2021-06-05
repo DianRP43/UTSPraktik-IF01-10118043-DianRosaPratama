@@ -188,7 +188,7 @@
                 android:checked="true"
                 android:text="Laki Laki"
                 android:buttonTint="@color/green_primary"
-                android:onClick="onRadioButtonClicked"/>/>
+                android:onClick="checkbutton"/>/>
 
             <RadioButton
 
@@ -198,7 +198,7 @@
                 android:layout_height="wrap_content"
                 android:text="Perempuan"
                 android:buttonTint="@color/green_primary"
-                android:onClick="onRadioButtonClicked"/>/>
+                android:onClick="checkbutton"/>/>
         </RadioGroup>
         <TextView
             android:id="@+id/hubungan"
